@@ -36,7 +36,10 @@ const Navigation = ({ activeSection, setActiveSection, language, setLanguage }) 
         <nav className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[var(--deep-blue)] to-[var(--earth-brown)] shadow-xl z-50">
             <div className="max-w-7xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
-                    <h1 className="heading-font text-2xl md:text-3xl font-bold text-[var(--cream)]">
+                    <h1
+                        className="heading-font text-2xl md:text-3xl font-bold text-[var(--cream)] cursor-pointer hover:text-[var(--sunset-orange)] transition-colors"
+                        onClick={() => setActiveSection('home')}
+                    >
                         {titles[language]}
                     </h1>
                     <div className="flex items-center gap-4 md:gap-8">
@@ -945,28 +948,32 @@ const MusicSection = ({ language }) => {
                 mongolian: 'Морин хуур',
                 desc: 'The horsehead fiddle is Mongolia\'s national instrument. Its distinctive sound mimics a horse\'s neighing, and the carved horse head represents the deep connection between Mongolians and horses.',
                 emoji: '🎻',
-                features: ['Two strings', 'Horse hair bow', 'Carved horse head', 'Deep, resonant sound']
+                features: ['Two strings', 'Horse hair bow', 'Carved horse head', 'Deep, resonant sound'],
+                videoId: 'v4xZUr0BEfE'
             },
             {
                 name: 'Khöömei',
                 mongolian: 'Хөөмий',
                 desc: 'Throat singing technique where a single person produces multiple pitches simultaneously. Different styles (Khoomei, Sygyt, Kargyraa) create haunting sounds that echo the vast landscapes.',
                 emoji: '🗣️',
-                features: ['Multiple pitches at once', 'Various styles', 'Ancient technique', 'UNESCO heritage']
+                features: ['Multiple pitches at once', 'Various styles', 'Ancient technique', 'UNESCO heritage'],
+                videoId: 'i0djHJBAP3U'
             },
             {
                 name: 'Yatga',
                 mongolian: 'Ятга',
                 desc: 'A traditional zither with 13-21 strings, played by plucking. It produces delicate, melodic sounds perfect for storytelling and accompanying long songs.',
                 emoji: '🎼',
-                features: ['13-21 strings', 'Plucked instrument', 'Melodic sound', 'Used in ensembles']
+                features: ['13-21 strings', 'Plucked instrument', 'Melodic sound', 'Used in ensembles'],
+                videoId: 'FTQbiNvZqaY'
             },
             {
                 name: 'Tovshuur',
                 mongolian: 'Товшуур',
                 desc: 'A two or three-stringed lute traditionally used by Western Mongolian ethnic groups. It has a distinctive twangy sound and is often played during celebrations.',
                 emoji: '🪕',
-                features: ['2-3 strings', 'Lute family', 'Rhythmic playing', 'Folk instrument']
+                features: ['2-3 strings', 'Lute family', 'Rhythmic playing', 'Folk instrument'],
+                videoId: 'eKs8oQEKZoQ'
             }
         ],
         mn: [
@@ -975,28 +982,32 @@ const MusicSection = ({ language }) => {
                 mongolian: 'Морин хуур',
                 desc: 'Морин хуур бол Монголын үндэсний хөгжмийн зэмсэг юм. Түүний өвөрмөц дуу хө нь адууны инээх дууг санагдуулдаг бөгөөд сийлсэн морины толгой нь монгол хүн ба адууны хоорондын гүн холбоог илэрхийлнэ.',
                 emoji: '🎻',
-                features: ['Хоёр утас', 'Адууны үсний нум', 'Сийлсэн морины толгой', 'Гүн цуурайтсан дуу']
+                features: ['Хоёр утас', 'Адууны үсний нум', 'Сийлсэн морины толгой', 'Гүн цуурайтсан дуу'],
+                videoId: 'v4xZUr0BEfE'
             },
             {
                 name: 'Хөөмий',
                 mongolian: 'Хөөмий',
                 desc: 'Нэг хүн олон өнгө аясыг нэгэн зэрэг гаргадаг хоолойн дуулах арга техник. Янз бүрийн хэв маяг (Хөөмий, Сыгыт, Каргыраа) нь уужим нутгийг цуурайтсан нууц дуу үүсгэдэг.',
                 emoji: '🗣️',
-                features: ['Нэг зэрэг олон өнгө ая', 'Төрөл бүрийн хэв маяг', 'Эртний техник', 'ЮНЕСКО-гийн өв']
+                features: ['Нэг зэрэг олон өнгө ая', 'Төрөл бүрийн хэв маяг', 'Эртний техник', 'ЮНЕСКО-гийн өв'],
+                videoId: 'i0djHJBAP3U'
             },
             {
                 name: 'Ятга',
                 mongolian: 'Ятга',
                 desc: '13-21 утастай уламжлалт цитр, татаж тоглодог. Энэ нь түүх өгүүлэх, урт дуунд дагалдахад тохиромжтой нарийн, аянга дуу гаргадаг.',
                 emoji: '🎼',
-                features: ['13-21 утас', 'Татаж тоглох зэмсэг', 'Аянга дуу', 'Хамтлагт ашигладаг']
+                features: ['13-21 утас', 'Татаж тоглох зэмсэг', 'Аянга дуу', 'Хамтлагт ашигладаг'],
+                videoId: 'FTQbiNvZqaY'
             },
             {
                 name: 'Товшуур',
                 mongolian: 'Товшуур',
                 desc: 'Баруун монголын угсаатны бүлгүүдийн уламжлалт хоёр буюу гурван утастай лют. Энэ нь өвөрмөц дуутай бөгөөд ихэвчлэн баяр ёслолын үеэр тоглогддог.',
                 emoji: '🪕',
-                features: ['2-3 утас', 'Лютийн гэр бүл', 'Хэмнэлт тоглолт', 'Ардын зэмсэг']
+                features: ['2-3 утас', 'Лютийн гэр бүл', 'Хэмнэлт тоглолт', 'Ардын зэмсэг'],
+                videoId: 'eKs8oQEKZoQ'
             }
         ],
         ja: [
@@ -1005,28 +1016,32 @@ const MusicSection = ({ language }) => {
                 mongolian: 'Морин хуур',
                 desc: '馬頭琴はモンゴルの国民楽器です。その独特な音は馬のいななきを模倣し、彫刻された馬の頭はモンゴル人と馬の深いつながりを表しています。',
                 emoji: '🎻',
-                features: ['2本の弦', '馬の毛の弓', '彫刻された馬の頭', '深く共鳴する音']
+                features: ['2本の弦', '馬の毛の弓', '彫刻された馬の頭', '深く共鳴する音'],
+                videoId: 'v4xZUr0BEfE'
             },
             {
                 name: 'ホーミー',
                 mongolian: 'Хөөмий',
                 desc: '一人で複数の音程を同時に生み出す喉歌技法。様々なスタイル（ホーミー、シギト、カルギラー）が広大な景観を反響する幽玄な音を作り出します。',
                 emoji: '🗣️',
-                features: ['同時に複数の音程', '様々なスタイル', '古代の技法', 'ユネスコ遺産']
+                features: ['同時に複数の音程', '様々なスタイル', '古代の技法', 'ユネスコ遺産'],
+                videoId: 'i0djHJBAP3U'
             },
             {
                 name: 'ヤトガ',
                 mongolian: 'Ятга',
                 desc: '13〜21本の弦を持つ伝統的なツィター、弾いて演奏します。物語を語ったり、長歌を伴奏したりするのに最適な繊細で旋律的な音を生み出します。',
                 emoji: '🎼',
-                features: ['13〜21本の弦', '撥弦楽器', '旋律的な音', 'アンサンブルで使用']
+                features: ['13〜21本の弦', '撥弦楽器', '旋律的な音', 'アンサンブルで使用'],
+                videoId: 'FTQbiNvZqaY'
             },
             {
                 name: 'トブシュール',
                 mongolian: 'Товшуур',
                 desc: '西モンゴルの民族グループが伝統的に使用する2〜3弦のリュート。独特の響く音を持ち、お祝いの際によく演奏されます。',
                 emoji: '🪕',
-                features: ['2〜3本の弦', 'リュート族', 'リズミカルな演奏', '民俗楽器']
+                features: ['2〜3本の弦', 'リュート族', 'リズミカルな演奏', '民俗楽器'],
+                videoId: 'eKs8oQEKZoQ'
             }
         ]
     };
@@ -1130,7 +1145,26 @@ const MusicSection = ({ language }) => {
                             <h3 className="heading-font text-3xl font-bold mb-4">
                                 {selectedInstrument.name} {language === 'en' ? 'Features' : language === 'mn' ? 'Онцлог' : '特徴'}
                             </h3>
-                            <div className="grid md:grid-cols-2 gap-4">
+
+                            {selectedInstrument.videoId && (
+                                <div className="mb-6">
+                                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                                        <iframe
+                                            className="absolute top-0 left-0 w-full h-full rounded-lg"
+                                            src={`https://www.youtube.com/embed/${selectedInstrument.videoId}`}
+                                            title={selectedInstrument.name}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                    <p className="text-center text-sm mt-2 opacity-80">
+                                        {language === 'en' ? '🎵 Listen to authentic ' : language === 'mn' ? '🎵 Жинхэнэ ' : '🎵 本物の'}{selectedInstrument.name}{language === 'en' ? ' performance' : language === 'mn' ? ' тоглолт сонсох' : 'の演奏を聴く'}
+                                    </p>
+                                </div>
+                            )}
+
+                            <div className="grid md:grid-cols-2 gap-4 mb-6">
                                 {selectedInstrument.features.map((feature, idx) => (
                                     <div key={idx} className="flex items-center gap-3">
                                         <div className="w-2 h-2 bg-[var(--gold)] rounded-full"></div>
