@@ -137,7 +137,6 @@ const HomeSection = ({ language, setActiveSection }) => {
             <div className="fixed bottom-6 right-6 z-50 bg-gradient-to-br from-[var(--deep-blue)] to-[var(--earth-brown)] text-[var(--cream)] px-5 py-3 rounded-2xl shadow-xl border-2 border-[var(--gold)]/50 text-center" style={{fontFamily: 'Roboto, sans-serif'}}>
                 <div className="text-xs uppercase tracking-widest text-[var(--gold)] mb-1">Created by</div>
                 <div className="font-bold text-base leading-tight">Sukhe Molor</div>
-                <div className="font-bold text-base leading-tight">Chinse Ihtamir</div>
             </div>
             <div className="max-w-5xl w-full">
                 <div className="text-center animate-fade-in-up">
@@ -1318,4 +1317,5 @@ const App = () => {
 };
 
 // Render the app
+
 ReactDOM.render(<App />, document.getElementById('root'));
